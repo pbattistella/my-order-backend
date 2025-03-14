@@ -23,9 +23,6 @@ public class Product {
     @Digits(integer = 10, fraction = 2)
     private BigDecimal price;
 
-    @Column(nullable = false)
-    private Integer stockQuantity;
-
     public UUID getId() {
         return id;
     }
@@ -58,18 +55,9 @@ public class Product {
         this.price = price;
     }
 
-    public int getStockQuantity() {
-        return stockQuantity;
-    }
-
-    public void setStockQuantity(int stockQuantity) {
-        this.stockQuantity = stockQuantity;
-    }
-
     @Override
     public String toString() {
         return "name='" + name + '\'' +
-               ", price=" + price +
-               ", stockQuantity=" + stockQuantity;
+               ", price=" + price;
     }
 }

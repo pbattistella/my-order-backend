@@ -18,7 +18,7 @@ public class Order {
     private UUID id;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime orderDate = LocalDateTime.now();
+    private LocalDateTime orderDate;
 
     @Column(precision = 10, scale = 2, nullable = false)
     @Digits(integer = 10, fraction = 2)
